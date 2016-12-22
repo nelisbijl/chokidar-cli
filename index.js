@@ -198,7 +198,7 @@ function createChokidarOpts(opts) {
         usePolling: opts.polling,
         interval: opts.pollInterval,
         binaryInterval: opts.pollIntervalBinary,
-        ignoreInitial: !opts.runonce || !opts.initial
+        ignoreInitial: !opts.runonce && !opts.initial
     };
     if (opts.ignore) chokidarOpts.ignored = opts.ignore;
 
